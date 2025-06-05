@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/shared/header";
+import cn from "classnames";
 
 const nunito = Nunito({
   subsets: ["cyrillic"],
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main>
+        <main className={cn("bg-[#FBFCFD]")}>
           <Header />
           {children}
         </main>
